@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Pavan's Book Review Web Application
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="/static/index.css">
+{% endblock %}
+
+{% block body %}
+    <h1>Please Register</h1>
+
+    <form action="{{ url_for('register') }}" method="post"> 
+        <div class="container">
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="passwrd" required>
+        
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Pavan's Book Review Web Application
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="/static/index.css">
+{% endblock %}
+
+{% block body %}
+    <h1>Please Choose a book to see its reviews and write your own review for the book</h1>
+
+    <ol>
+        {% for book in books %}
+            <li>
+                <a href="{{ url_for('chosenBook', chosenBookID=book.id) }}">
+                    {{ book.title }} by {{ book.author }}
+                </a>
+            </li>
+        {% endfor %}
+    </ol>
+{% endblock %}

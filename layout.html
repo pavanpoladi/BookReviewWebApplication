@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <div class="container">
+            {% block head %}{% endblock %}
+        </div>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        {% if success_msg %}
+            <header>
+                <div class = "alert alert-success" role = "alert">
+                    {{ success_msg }}
+                <div>
+            <header>
+        {% endif %}
+
+        {% if info_msg %}
+            <header>
+                <div class = "alert alert-info" role = "alert">
+                    {{ info_msg }}
+                <div>
+            <header>
+        {% endif %}
+
+        {% if danger_msg %}
+            <header>
+                <div class = "alert alert-danger" role = "alert">
+                    {{ danger_msg }}
+                <div>
+            <header>
+        {% endif %}
+
+
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>

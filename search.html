@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Pavan's Book Review Web Application
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="/static/index.css">
+{% endblock %}
+
+{% block body %}
+    <h1>Please Search for a book to see reviews and write your own review</h1>
+
+    <form action="{{ url_for('search') }}" method="post"> 
+        <div class="form-group">
+                <label for="Search"><b>Search</b></label>
+                <input type="text" placeholder="Title, Author, ISBN" name="searchInput" required>
+            
+                <button type="submit">Submit</button>
+        </div>
+    </form>
+{% endblock %}
