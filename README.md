@@ -1,5 +1,7 @@
 # Project 1
 
+A video demo of this Project is included in the uploaded files
+
 In this project I created a book review web application where users can register, login, search for books, see reviews for those books along with writing their own reviews, see Average ratings and other information for books using a GoodReads API, and finally get information directly from this website using its very own api.
 
 To start off, users can register using a username and password, and then go ahead and login using the same information. A message will pop up telling the user if the information they entered is incorrect. Once the user closes the application or goes back to the home page, they will automatically be logged out.
